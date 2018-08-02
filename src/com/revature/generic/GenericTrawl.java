@@ -29,14 +29,14 @@ public class GenericTrawl {
 		return returnList;
 	}
 	
-	public static <T> ArrayList<Car> betterTrawl(ArrayList<T> things, String classType) {
+	public static <T> ArrayList<T> betterTrawl(ArrayList<T> things, String classType) {
 		
-		ArrayList<Car> returnList = new ArrayList<Car>();
+		ArrayList<T> returnList = new ArrayList<T>();
 		
 		for (T item : things) {
 			try {
 				if (item.getClass() == Class.forName(classType)) {
-					returnList.add((Car)item);
+					returnList.add(item);
 				}
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
@@ -65,7 +65,7 @@ public class GenericTrawl {
 		testList.add(t3);
 		testList.add(cr1);
 		
-		System.out.println(betterTrawl(testList, "com.revature.oop.Car"));
+		System.out.println(betterTrawl(testList, "com.revature.oop.ChargingRhino"));
 	}
 
 }
