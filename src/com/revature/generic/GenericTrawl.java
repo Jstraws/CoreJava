@@ -22,7 +22,6 @@ public class GenericTrawl {
 					returnList.add(v);
 				}
 			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -66,7 +65,7 @@ public class GenericTrawl {
 		testList.add(t3);
 		testList.add(cr1);
 		
-		System.out.println(trawl(testList));
+		System.out.println(betterTrawl(testList, "com.revature.oop.Car"));
 	}
 
 }
