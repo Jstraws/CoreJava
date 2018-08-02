@@ -29,6 +29,23 @@ public class GenericTrawl {
 		
 		return returnList;
 	}
+	
+	public static <T> ArrayList<Car> betterTrawl(ArrayList<T> things, String classType) {
+		
+		ArrayList<Car> returnList = new ArrayList<Car>();
+		
+		for (T item : things) {
+			try {
+				if (item.getClass() == Class.forName(classType)) {
+					returnList.add((Car)item);
+				}
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return returnList;
+	}
 
 	public static void main(String[] args) {
 		Car c1 = new Car(1956, 13);
