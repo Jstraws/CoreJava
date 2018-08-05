@@ -47,10 +47,10 @@ public class GenericTrawl {
 	}
 
 	public static void main(String[] args) {
-		Car c1 = new Car(1956, 13);
-		Car c2 = new Car(2001, 95);
+		Car c1 = new Car(1956, "", 13);
+		Car c2 = new Car(2001, "", 95);
 		Truckski t1 = new Truckski(1956);
-		Car c3 = new Car(2651, 1000);
+		Car c3 = new Car(2651, "", 1000);
 		Truckski t2 = new Truckski(1754);
 		Truckski t3 = new Truckski(1845);
 		ChargingRhino cr1 = new ChargingRhino();

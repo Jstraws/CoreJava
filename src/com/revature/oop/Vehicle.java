@@ -2,15 +2,17 @@ package com.revature.oop;
 
 import com.revature.exception.OutOfFuelException;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Comparable<Vehicle> {
 
-	protected int yearMade;
-	
-	public Vehicle(int yearMade) {
-		super();
+	protected Integer yearMade;
+	protected String manufacturer;
+
+	public Vehicle(int yearMade, String manufacturer) {
 		this.yearMade = yearMade;
+		this.manufacturer = manufacturer;
 	}
-	
+
+
 	public Vehicle() {
 		super();
 	}
@@ -25,9 +27,24 @@ public abstract class Vehicle {
 		this.yearMade = yearMade;
 	}
 
-	@Override
-	public String toString() {
-		return "Vehicle [yearMade=" + yearMade + "]";
+	public String getManufacturer() {
+		return manufacturer;
 	}
 
+	public void setManufacturer(String manufacturer) {
+		this.manufacturer = manufacturer;
+	}
+
+	@java.lang.Override
+	public java.lang.String toString() {
+		return "Vehicle{" +
+				"yearMade=" + yearMade +
+				", manufacturer='" + manufacturer + '\'' +
+				'}';
+	}
+
+	@Override
+	public int compareTo(Vehicle vehicle) {
+		return this.yearMade.compareTo(vehicle.getYearMade());
+	}
 }

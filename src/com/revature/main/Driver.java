@@ -35,8 +35,8 @@ public class Driver {
 	}
 
 	public static void funWithExceptions() {
-		Car c1 = new Car(1982, 40);
-		Car c2 = new Car(2007 , 3);
+		Car c1 = new Car(1982, "", 40);
+		Car c2 = new Car(2007, "", 3);
 		
 		try {
 			c1.go();

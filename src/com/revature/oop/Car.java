@@ -5,12 +5,12 @@ import com.revature.exception.*;
 public class Car extends Vehicle implements Steerable {
 	
 	private int tankPercentage;
-	
-	public Car(int yearMade, int tankPercentage) {
-		super(yearMade);
+
+	public Car(int yearMade, String manufacturer, int tankPercentage) {
+		super(yearMade, manufacturer);
 		this.tankPercentage = tankPercentage;
 	}
-	
+
 	public Car() {}
 	
 	@Override
@@ -32,7 +32,11 @@ public class Car extends Vehicle implements Steerable {
 
 	@Override
 	public String toString() {
-		return "Car [tankPercentage=" + tankPercentage + ", yearMade=" + yearMade + "]";
+		return "Car{" +
+				"tankPercentage=" + tankPercentage +
+				", yearMade=" + yearMade +
+				", manufacturer='" + manufacturer + '\'' +
+				'}';
 	}
 
 	@Override
@@ -44,5 +48,4 @@ public class Car extends Vehicle implements Steerable {
 	public void turnRight() {
 		System.out.println("Car is turning right!");
 	}
-
 }
